@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import b3d from '../AssetsBlog/b3d.svg';
-import logo from '../AssetsBlog/logo.svg';
+import b3d from '../assetsBlog/b3d.svg';
+import logo from '../assetsBlog/logo.svg';
 
 const HeaderBlog = () => {
   return (
@@ -26,7 +26,7 @@ const B3D = styled.img`
   position: absolute;
   z-index: -1;
   width: 55%;
-  left: 30%;
+  left: 33%;
   top: 1%;
 `
 const Logo = styled.img`

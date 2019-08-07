@@ -1,22 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
-import {dataBlog} from '../dataBlog';
-import {months} from '../dataBlog';
-import {years} from '../dataBlog';
+import {dataBlog, arraySliderImages} from '../dataBlog';
 
-const BlogPostAndDate = () => {
+const SliderAndBlogPost = () => {
   return dataBlog.map( (item, index) => {
     return (
       <div key={index}>
         <ContainerWrapper>
-          <DateArticle> {months.march} {years.year2018} </DateArticle>
             <TextWrapper>
               <Title> {item.title} </Title>
               <Date> {item.date} </Date>
-              <ColumnWrapper>
               <Text> {item.text} </Text>
-              <Text> {item.text} </Text>
-              </ColumnWrapper>
             </TextWrapper>
         </ContainerWrapper>
       </div>
@@ -25,12 +19,26 @@ const BlogPostAndDate = () => {
   )
 };
 
-const DateArticle = styled.div `
-  max-width: 100px;
-  max-height: 90px;
-  font-size: 34px;
-  line-height: 40px;
+const SliderBox = () => {
+  return (
+    <div>
+      <Box>
+        <img src={arraySliderImages[0].slide1}/>
+      </Box>
+    </div>
+  );
+};
+
+// class Slider extends Component {
+//   state = {
+//   };
+// };
+const Box = styled.div `
+  border: 2px solid black;
+  width: 1010px;
+  height: 580px;
 `
+
 const Date = styled.p `
   font-size: 20px;
   line-height: 23px;
@@ -45,15 +53,10 @@ const Text = styled.p `
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 50px;
+  margin-top: 40px;
 `
-
 const TextWrapper = styled.div `
- margin-left: 80px;
-`
-const ColumnWrapper = styled.div `
-  column-count: 2;
-  column-gap: 60px;
-  padding-top: 40px;
+
 `
 const ContainerWrapper = styled.div `
 border-top: 2px solid black;
@@ -61,6 +64,6 @@ padding-top: 25px;
 display: flex;
 flex-direction: row;
 height: 420px;
+margin-left: 175px;
 `
-
-export default BlogPostAndDate;
+export default SliderAndBlogPost;
