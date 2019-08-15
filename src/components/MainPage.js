@@ -1,24 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
-import HeaderBlog from './HeaderBlog';
-import BlogPostAndDate from './BlogPostAndDate';
-import SliderAndBlogPost from './SliderAndBlogPost';
-import SliderBox from './SliderAndBlogPost';
-import {arraySliderImages} from '../dataBlog';
+import Header from './Header';
+import ArticleWithDate from './ArticleWithDate';
+import Article from './Article';
 
-const MainPage = () => {
-  return (
-    <MainStyle>
-      <HeaderBlog />
-      <BlogPostAndDate />
-      <SliderAndBlogPost />
-      <img src={arraySliderImages[0].slide1}/>
-    </MainStyle>
-  );
-};
+export default class MainPage extends Component {
+  
+  state = {
+    
+  };
+  
+  render() {
+    return(
+      <MainStyle>
+        <Header />
+        <ArticleWithDate />
+        <Article />
+        <Article />
+        <ArticleWithDate />
+      </MainStyle>
+    );
+  };
+}
+
 
 const MainStyle = styled.main`
   margin-right: 110px;
   margin-left: 110px;
+  @media (max-width: 765px) {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
 `
-export default MainPage;

@@ -1,26 +1,3 @@
-export const months = {
-  january: 'January',
-  february: 'February',
-  march: 'March',
-  april: 'April',
-  may: 'May',
-  june: 'June',
-  july: 'July',
-  august: 'August',
-  september: 'September',
-  october: 'October',
-  november: 'November',
-  december: 'December'
-
-};
-export const years = {
-  year2015: '2015',
-  year2016: '2016',
-  year2017: '2017',
-  year2018: '2018',
-  year2019: '2019'
-};
-
 const arraySliderImages = [
   {
     slide1: "http://britishwave.ru/images/upload/articles//IMG24e49-1bde5.jpg"
@@ -51,8 +28,28 @@ export const dataBlog = [
             amazing moments not only in the memory but also in the photos, 
             ShuttrPlace is the place where your ideal photographer lives`
     
+  },
+  {
+    title: "Lorem Ipsum",
+    date: "",
+    text:
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
   }
 ];
+
+export const days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
+ '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30',
+  '31'];
+
+export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 
+'September', 'October', 'November', 'December'];
+
+export const years = ['2016', '2017', '2018' ,'2019'];
 
 export {
   arraySliderImages

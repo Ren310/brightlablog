@@ -1,22 +1,25 @@
 @font-face {
 	font-family: 'HelveticaNeueCyrMedium';
-	src: url('./AssetsBlog/HelveticaNeueCyrMedium.ttf');
+	src: url('./assetsBlog/HelveticaNeueCyrMedium.ttf');
 	src: local('HelveticaNeueCyrMedium'),
-		url('./AssetsBlog/HelveticaNeueCyrMedium.ttf') format('truetype');
+		url('./assetsBlog/HelveticaNeueCyrMedium.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'HelveticaNeueCyrBold';
-	src: url('./AssetsBlog/HelveticaNeueCyrBold.ttf');
+	src: url('./assetsBlog/HelveticaNeueCyrBold.ttf');
 	src: local('HelveticaNeueCyr-Bold'),
-		url('./AssetsBlog/HelveticaNeueCyrBold.ttf') format('truetype');
+		url('./assetsBlog/HelveticaNeueCyrBold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 }
 
-
+/* fix horizontal scroll */
 body {
-    font-family: 'HelveticaNeueCyrMedium', sans-serif;
+		font-family: 'HelveticaNeueCyrMedium', sans-serif;
+		width: 100%;
+		max-width: 100%;
+		overflow-x: hidden;
 }
