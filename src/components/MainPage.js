@@ -6,10 +6,6 @@ import Article from './Article';
 
 export default class MainPage extends Component {
   
-  state = {
-    
-  };
-  
   render() {
     return(
       <MainStyle>

@@ -5,13 +5,14 @@ import SimpleSlider from '../Slider/SimpleSlider';
 
 const Article = () => {
   return dataBlog.map( (item, index) => {
+    console.log(item);
     return (
       <div key={index}>
         <ContainerWrapper>
             <TextWrapper>
               <Title> {item.title} </Title>
-              <Date> {item.date} </Date>
-              <Text> {item.text} </Text>
+              <Date> {item.day} {item.month} </Date>
+              <Text> { item.text } </Text>
             </TextWrapper>
         </ContainerWrapper>
           <SliderBox>
@@ -70,6 +71,24 @@ const ContainerWrapper = styled.div `
   flex-direction: row;
   margin-left: 70px;
   margin-bottom: 70px;
+  .slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 6px;
+
+    text-align: left;
+
+    opacity: 1;
+    color: black;
+}
   @media (max-width: 765px) {
     padding-top: 24px;
     margin-top: 25px;

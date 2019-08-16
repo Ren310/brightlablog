@@ -1,21 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import {dataBlog,
-        months,
-        years} from '../../dataBlog';
+import { dataBlog } from '../../dataBlog';
 
 const ArticleWithDate = () => {
   return dataBlog.map( (item, index) => {
     return (
       <div key={index}>
         <ContainerWrapper>
-          <DateArticle> {months[0]} {months.march} {years.year2018} </DateArticle>
+          <DateArticle>  </DateArticle>
             <TextWrapper>
               <Title> {item.title} </Title>
-              <Date> {item.date} </Date>
+              <Date> {item.day} {item.month} </Date>
               <ColumnWrapper>
-              <Text> {item.text} </Text>
-              <Text> {item.text} </Text>
+              <Text> { item.text } </Text>
+              <Text> { item.text } </Text>
               </ColumnWrapper>
             </TextWrapper>
         </ContainerWrapper>

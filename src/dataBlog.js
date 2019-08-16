@@ -13,44 +13,59 @@ const arraySliderImages = [
   }
 ];
 
+const firstTextBlock = 
+`Photographer have now a great platform that makes their business
+development easy and it also the best way to connect and communicate 
+with customers. Besides, photographers are able to diversify their 
+business into other genres without risks. For example, a wedding 
+photographer can upload family portfolio and therefore to find more 
+different customer and increase their income.
+If you are going to marry, waiting a baby or you just want to save 
+amazing moments not only in the memory but also in the photos, 
+ShuttrPlace is the place where your ideal photographer lives`;
+
+const secondTextBlock =
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+ non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
+
 export const dataBlog = [
   {
     title: "Content name Content Desription",
-    date: "12 March",
-    text: 
-       `Photographer have now a great platform that makes their business
-            development easy and it also the best way to connect and communicate 
-            with customers. Besides, photographers are able to diversify their 
-            business into other genres without risks. For example, a wedding 
-            photographer can upload family portfolio and therefore to find more 
-            different customer and increase their income.
-            If you are going to marry, waiting a baby or you just want to save 
-            amazing moments not only in the memory but also in the photos, 
-            ShuttrPlace is the place where your ideal photographer lives`
-    
+    day: 15,
+    month: 'June',
+    year: 2019,
+    text: firstTextBlock
   },
   {
     title: "Lorem Ipsum",
-    date: "",
-    text:
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+    day: 28,
+    month: 'January',
+    year: 2018,
+    text: secondTextBlock
+  },
+  {
+    title: "New title for new post",
+    day: 5,
+    month: 'May',
+    year: 2016,
+    text: secondTextBlock
+  },
+  {
+    title: "React JS, Angular JS, Vue JS",
+    day: 19,
+    month: 'November',
+    year: 2014,
+    text: firstTextBlock
   }
 ];
 
-export const days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
- '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30',
-  '31'];
-
-export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 
-'September', 'October', 'November', 'December'];
-
-export const years = ['2016', '2017', '2018' ,'2019'];
-
 export {
-  arraySliderImages
+  arraySliderImages,
+  firstTextBlock,
+  secondTextBlock
 }
+

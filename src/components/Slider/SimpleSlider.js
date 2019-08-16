@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import {arraySliderImages} from '../../dataBlog';
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick-theme.css"
 
 export default class SimpleSlider extends React.Component {
   render() {
@@ -34,11 +34,9 @@ const SliderWrapper = styled.div`
   box-sizing: border-box;
   margin-bottom: 65px;
   @media (min-width: 1300px) and (max-width: 1600px) {
+   
     width: 993px;
     height: 500px;
-    .slick-dots li button:before {
-      border: 10px solid black;
-    };
   }
 
   @media (max-width: 765px) {
