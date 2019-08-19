@@ -1,28 +1,67 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import { dataBlog } from '../../dataBlog';
 import SimpleSlider from '../Slider/SimpleSlider';
 
-const Article = () => {
-  return dataBlog.map( (item, index) => {
-    console.log(item);
-    return (
-      <div>
-        <ContainerWrapper key={index}>
-            <TextWrapper>
-              <Title> {item.title} </Title>
-              <Date> {item.day} {item.month} </Date>
-              <Text> { item.text } </Text>
-            </TextWrapper>
-        </ContainerWrapper>
-          <SliderBox>
-            <SimpleSlider images = {this.props.sliderUrls} />
-          </SliderBox>
-      </div> 
-      )
+
+
+
+export default class Article extends Component {
+  render() {
+    let sliderRender = () => {
+      console.log(this.props, 'asdfasdfasdfasdfasdf')
+      
+      if (this.props.hasOwnProperty('sliderUrls') && this.props.sliderUrls.length > 0) {
+        return (
+          <div>
+            <h4>SliderUrls exists</h4>
+          </div>
+        );
+      } else {
+        return(
+          <div>
+            <h4>SliderUrls not exists</h4>
+          </div>
+        );
+      }
     }
-  )
-};
+    
+    return (
+        <div>
+          <div>
+            {sliderRender}
+          </div>
+        </div>
+    );
+  }
+}
+
+
+
+
+
+
+
+// const Article = () => {
+//   return dataBlog.map( (item, index) => {
+//     console.log(item);
+//     return (
+//       <div>
+//         <ContainerWrapper key={index}>
+//             <TextWrapper>
+//               <Title> {item.title} </Title>
+//               <Date> {item.day} {item.month} </Date>
+//               <Text> { item.text } </Text>
+//             </TextWrapper>
+//         </ContainerWrapper>
+//           <SliderBox>
+//             <SimpleSlider images = {this.props.sliderUrls} />
+//           </SliderBox>
+//       </div> 
+//       )
+//     }
+//   )
+// };
 
 
 const Date = styled.p `
@@ -103,4 +142,4 @@ const SliderBox = styled.div`
   }
 `
 
-export default Article;
+// export default Article;

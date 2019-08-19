@@ -1,12 +1,22 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import Article from '../Article/Article';
 
 
 class DateArticle extends Component {
   render() {
+    const articles = this.props.articles.map((article, index) => {
+      return (
+       <Article key = {index} {...article}/>
+      )
+    });
+    
     return (
-    <Date> {this.props.globalArticlesDate} </Date>
-    )
+      <div>
+        <Date> {this.props.globalArticlesDate} </Date>
+        {articles}
+      </div>
+    );
   }
 };
 

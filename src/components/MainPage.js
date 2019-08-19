@@ -5,9 +5,8 @@ import DateArticle from './DateArticle/DateArticle';
 
 import { postDataBlog, Articles } from '../dataBlog';
 
-export default class MainPage extends Component {
+export default class MainPage extends Component {  
   render() {
-    
     const dateItems = postDataBlog.map((article, index) => {
       return( 
         <DateArticle key = {index}  { ...article }/>
