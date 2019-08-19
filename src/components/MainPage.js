@@ -1,19 +1,26 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Header from './Header';
-import ArticleWithDate from './ArticleWithDate';
-import Article from './Article';
+import DateArticle from './DateArticle/DateArticle';
+
+import { postDataBlog, Articles } from '../dataBlog';
 
 export default class MainPage extends Component {
-  
   render() {
+    
+    const dateItems = postDataBlog.map((article, index) => {
+      return( 
+        <DateArticle key = {index}  { ...article }/>
+        //Я не понимаю, сюда можно вписать второй мап или же нет,
+        //так как в return уже есть какой-то код?
+        //Если мапать нужно уже в другом компоненте, к примеру ArticleBlog
+        //то как обратиться к ключу article в объекте с массивом
+        )
+    })
     return(
       <MainStyle>
         <Header />
-        <ArticleWithDate />
-        <Article />
-        <Article />
-        <ArticleWithDate />
+        { dateItems }
       </MainStyle>
     );
   };
@@ -21,10 +28,10 @@ export default class MainPage extends Component {
 
 
 const MainStyle = styled.main`
-  margin-right: 110px;
-  margin-left: 110px;
+  padding-right: 110px;
+  padding-left: 110px;
   @media (max-width: 765px) {
-    margin-right: 30px;
-    margin-left: 30px;
+    padding-right: 26px;
+    padding-left: 26px;
   }
 `

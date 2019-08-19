@@ -102,11 +102,13 @@ const ArrowSize = styled.sup`
 `
 
 const HeaderWrapper = styled.div`
+  margin-bottom: 240px;
   @media (max-width: 765px) {
     display: inline-flex;
     flex-wrap: nowrap;
     flex-direction: column-reverse;
     flex-shrink: 190px;
+    margin-bottom: 24px;
   }
 `
 export default Header;

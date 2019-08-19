@@ -19,7 +19,7 @@
 /* fix horizontal scroll */
 body {
 		font-family: 'HelveticaNeueCyrMedium', sans-serif;
-		width: 100%;
+		/* width: 100%;
 		max-width: 100%;
-		overflow-x: hidden;
+		overflow-x: hidden; */
 }

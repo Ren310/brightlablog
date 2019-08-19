@@ -7,8 +7,8 @@ const Article = () => {
   return dataBlog.map( (item, index) => {
     console.log(item);
     return (
-      <div key={index}>
-        <ContainerWrapper>
+      <div>
+        <ContainerWrapper key={index}>
             <TextWrapper>
               <Title> {item.title} </Title>
               <Date> {item.day} {item.month} </Date>
@@ -16,9 +16,9 @@ const Article = () => {
             </TextWrapper>
         </ContainerWrapper>
           <SliderBox>
-            <SimpleSlider />
-          </SliderBox> 
-      </div>
+            <SimpleSlider images = {this.props.sliderUrls} />
+          </SliderBox>
+      </div> 
       )
     }
   )
@@ -61,8 +61,8 @@ const Text = styled.p `
   }
 `
 const TextWrapper = styled.div `
-  margin-right: 400px;
-  
+  @media (max-width: 765px) {
+  }
 `
 const ContainerWrapper = styled.div `
   border-top: 2px solid black;
@@ -92,12 +92,15 @@ const ContainerWrapper = styled.div `
   @media (max-width: 765px) {
     padding-top: 24px;
     margin-top: 25px;
-    margin-left: 90px;
     margin-bottom: 28px;
+    margin-left: 100px;
   }
 `
 const SliderBox = styled.div`
-  margin-left: 70px;
+  margin-left: 100px;
+  @media (max-width: 765px) {
+    margin: 0;
+  }
 `
 
 export default Article;

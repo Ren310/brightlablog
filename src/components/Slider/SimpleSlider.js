@@ -41,11 +41,11 @@ const SliderWrapper = styled.div`
 
   @media (max-width: 765px) {
     width: 230px;
-    height: 140px;
+    height: 230px;
+    margin-bottom: 30px;
   }
 `
 const SlideImg = styled.img`
   width: 100%;
   height: 500px;
-
 `
