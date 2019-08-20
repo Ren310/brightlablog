@@ -68,7 +68,7 @@ export const postDataBlog = [
       {
         title: "Content name Content Desription",
         day: 15,
-        month: "June",
+        month: "June", 
         year: 2019,
         text: firstTextBlock,
         sliderUrls: [
