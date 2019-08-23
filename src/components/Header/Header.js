@@ -6,33 +6,36 @@ import logo from '../../assetsBlog/logo.svg';
 
 const Header = () => {
   return (
+    <>
     <HeaderWrapper>
-      <HeaderBlog>Brightlab <br/> blog</HeaderBlog>
+        <HeaderBlog>Brightlab blog</HeaderBlog>
           <B3D src={b3d} alt="B3D"/>
           <Logo src={logo} alt="logo"/>
           <LinkArrow href="https://brightlab.me">Official website <ArrowSize>&#129109;</ArrowSize></LinkArrow>
-    </HeaderWrapper>
+       </HeaderWrapper>
+    
+    </>
   );
 };
 
 //style
-const HeaderBlog = styled.span`
+const HeaderBlog = styled.h2`
   font-family: 'HelveticaNeueCyrMedium';
+  margin: 0;
   font-size: 200px;
+  width: 900px;
   line-height: 190px;
-  
-  @media (min-width: 1300px) and (max-width: 1600px) {
-    margin: 0;
-    margin-top: 80px;
-    margin-bottom: 90px;
-  }
+
   @media (min-width: 766px) and (max-width: 1299px) {
     font-size: 110px;
     line-height: 100px;
+    width: 500px;
   }
   @media (max-width: 765px) {
+    width: 175px;
     font-size: 40px;
     line-height: 42px;
+    order: 3;
   }
 `
 const B3D = styled.img`
@@ -41,41 +44,28 @@ const B3D = styled.img`
   width: 55%;
   left: 33%;
   top: 1%;
-  @media (min-width: 1300px) and (max-width: 1600px) {
-    top: -15%;
-    left: 38%;
-    width: 60%;
-  }
-  @media (min-width: 766px) and (max-width: 1299px) {
-    top: -4%;
-    left: 47%;
-    width: 40%;
-  }
   @media (max-width: 765px) {
-    width: 70%;
-    left: 38%;
-    top: -3%;
+    left: 285px;
   }
 `
 const Logo = styled.img`
-  position: absolute;
-  top: 15%;
-  left: 50%;
+  position: relative;
+  bottom: 351px;
+  left: 900px;
   @media (min-width: 1300px) and (max-width: 1600px) {
-    left: 68%;
-    top: 13%;
+    left: 50%;
   }
   @media (min-width: 766px) and (max-width: 1299px) {
-    transform: scale(0.50);
-    left: 55%;
-    top: -5%;
+    width: 550px;
+    height: 350px;
+    bottom: 200px;
+    left: 40%;
   }
   @media (max-width: 765px) {
     width: 40px;
     height: 25px;
     position: static;
     order: 1;
-    margin-top: 24px;
   }
 `
 const LinkArrow = styled.a`
@@ -94,6 +84,7 @@ const LinkArrow = styled.a`
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 10px;
+    order: 2;
   }
 `
 const ArrowSize = styled.sup`
@@ -102,13 +93,21 @@ const ArrowSize = styled.sup`
 `
 
 const HeaderWrapper = styled.div`
-  margin-bottom: 240px;
+  margin-bottom: 100px;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  @media (max-width: 1300px) {
+    height: 350px;
+    margin-bottom: 50px;
+  }
   @media (max-width: 765px) {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    flex-direction: column-reverse;
-    flex-shrink: 190px;
+    height: 175px;
     margin-bottom: 24px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 `
+
 export default Header;
